@@ -1,0 +1,27 @@
+create-react-app reacttests
+
+deletar todos os arquivos que nao utilizamos - inclusive aquele de teste
+
+yarn add react-app-rewired -D //para adicionar configuracoes especificas com o create-react-app <br/>
+trocar o react-scrips por react-app-rewired nos scrips do package.json (exceto eject) <br/>
+criar o config-overrides.js com pelo menos o module.exports vazio por ser obrigatorio <br/>
+remove a config do eslint no package.json <br/>
+adicionar ao package.json a chave jest com as configurações do jest para testes <br/>
+"jest": {
+  "testMatch": [
+    "**/__tests__/**/*.test.js"
+  ],
+  "setupFilesAfterEnv": [
+    "@testing-library/react/cleanup-after-each",
+    "@testing-library/jest-dom/extend-expect"
+  ],
+  "moduleNameMapper": {
+    "^~/(.*)": "<rootDir>/src/$1"
+  }
+},
+
+yarn add @testing-library/react @testing-library/jest-dom -D <br/>
+a primeira lib eh para ajudar a testar os componentes que criamos  <br/>
+a segundo lib adiciona a possiblidade de testarmos HTML (dom) atraves do JEST, ja que ele so conhece JS
+
+yarn add @types/jest -D // add typescript para ter o intellisense
