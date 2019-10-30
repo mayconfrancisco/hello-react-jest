@@ -30,3 +30,5 @@ yarn add @types/jest -D // add typescript para ter o intellisense
 
 yarn add jest-localstorage-mock -D //mock para localstorage <br/>
 add "jest-localstorage-mock" no setupFilesAfterEnv no package.json
+
+yarn add axios-mock-adapter -D //mock para o axios
