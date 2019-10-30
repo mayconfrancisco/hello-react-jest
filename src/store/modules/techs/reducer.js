@@ -1,8 +1,8 @@
 import produce from 'immer';
 
-export const INTIAL_STATE = [];
+export const INITIAL_STATE = [];
 
-export default function techs(state = INTIAL_STATE, action) {
+export default function techs(state = INITIAL_STATE, action) {
   return produce(state, draft => {
     switch(action.type) {
       case 'ADD_TECH':
